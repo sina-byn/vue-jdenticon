@@ -28,6 +28,21 @@ app.use(Jdenticon);
 app.mount('#app');
 ```
 
+Then:
+
+```ts
+<script setup lang="ts">
+import { ref } from 'vue';
+const value = ref<string>('identicon');
+</script>
+
+<template>
+  <input type="text" v-model="value" />
+  <Jdenticon v-model="value" />
+</template>
+```
+
+
 ### Import
 
 ```html
