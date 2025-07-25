@@ -1,5 +1,46 @@
-# Vue 3 + TypeScript + Vite
+# vue-jdenticon [![NPM version](https://img.shields.io/npm/v/vue-jdenticon.svg?style=flat)](https://www.npmjs.com/package/vue-jdenticon) [![NPM monthly downloads](https://img.shields.io/npm/dm/vue-jdenticon.svg?style=flat)](https://npmjs.org/package/vue-jdenticon) [![NPM total downloads](https://img.shields.io/npm/dt/vue-jdenticon.svg?style=flat)](https://npmjs.org/package/vue-jdenticon)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A simple wrapper around [Jdenticon](https://jdenticon.com/) for Vue3.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+Please consider following this project's author, [Sina Bayandorian](https://github.com/sina-byn), and consider starring the project to show your :heart: and support.
+
+## Installation
+
+```shell
+npm i vue-jdenticon
+```
+
+## Usage
+
+### Global - Plugin
+
+```ts
+import { createApp } from 'vue';
+import App from './App.vue';
+import './style.css';
+
+import Jdenticon from 'vue-jdenticon';
+
+const app = createApp(App);
+
+app.use(Jdenticon);
+
+app.mount('#app');
+```
+
+### Import
+
+```html
+<script setup lang="ts">
+import { ref } from 'vue';
+
+import { Jdenticon } from 'vue-jdenticon';
+
+const value = ref<string>('identicon');
+</script>
+
+<template>
+  <input type="text" v-model="value" />
+  <Jdenticon v-model="value" />
+</template>
+```
