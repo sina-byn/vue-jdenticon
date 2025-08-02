@@ -59,3 +59,15 @@ const value = ref<string>('identicon');
   <Jdenticon v-model="value" />
 </template>
 ```
+
+### Static Jdenticon
+
+```html
+<script setup lang="ts">
+import { StaticJdenticon } from 'vue-jdenticon';
+</script>
+
+<template>
+  <StaticJdenticon value="identicon" />
+</template>
+```
